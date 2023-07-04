@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+    <title>Math - Home</title>
+    {% endblock title %}
+    {% block style %}
+    <link rel="stylesheet" href="{% static 'base/styles/style.css' %}">
+    <link rel="stylesheet" href="{% static 'base/styles/advance.css' %}">
+    {% endblock style %}
+</head>
+<body>
+    {% include 'base/partials/navbar.html' %}
+    {% block content %}
+    
+    {% endblock content %}
+    
+    <!-- {% include 'base/partials/footer.html' %} -->
+    {% block script %}
+    <script src="{% static 'base/js/script.js' %}"></script>
+    {% endblock script %}
+</body>
+</html>

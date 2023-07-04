@@ -15,7 +15,7 @@ def Service(request):
 
 def Contact(request):
     context = {}
-    return render(request, 'base/contactus.html',  context)
+    return render(request, 'base/contact.html',  context)
 
 def Exercise(request):
     context = {}
