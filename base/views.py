@@ -9,9 +9,6 @@ def About(request):
     context = {}
     return render(request, 'base/about.html',  context)
 
-def Service(request):
-    context = {}
-    return render(request, 'base/services.html',  context)
 
 def Contact(request):
     context = {}

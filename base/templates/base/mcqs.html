@@ -1,0 +1,28 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+<h2>9th Class</h2>
+<section class="my-card-container">
+    <div class="my-card">
+      <img src="{% static 'base/images/t1.png' %}" alt="my-Card Image">
+      <div class="my-card-content">
+        <h2 class="fs-2">my-Card Title</h2>
+        <p>my-Card description goes here.</p>
+      </div>
+    </div>
+    <div class="my-card">
+      <img src="{% static 'base/images/t2.png' %}" alt="my-Card Image">
+      <div class="my-card-content">
+        <h2 class="fs-2">my-Card Title</h2>
+        <p>my-Card description goes here.</p>
+      </div>
+    </div>
+    <div class="my-card">
+      <img src="{% static 'base/images/t3.png' %}" alt="my-Card Image">
+      <div class="my-card-content">
+        <h2 class="fs-2">my-Card Title</h2>
+        <p>my-Card description goes here.</p>
+      </div>
+    </div>
+</section>
+{% endblock content %}
