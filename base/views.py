@@ -1,8 +1,11 @@
 from django.shortcuts import render
+from .models import *
 
 # Create your views here.
 def Index(request):
-    context = {}
+    content=Content.objects.all()
+    print(content)
+    context = {'contents':content}
     return render(request, 'base/index.html',  context)
 
 def About(request):

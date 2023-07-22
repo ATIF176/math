@@ -1,44 +1,41 @@
 from django.db import models
 
-class Class(models.Model):
+class ClassName(models.Model):
     name = models.CharField(max_length=255)
 
     def __str__(self):
         return self.name
 
 class Content(models.Model):
-    group=models.ManyToManyField(Class)
-    type = models.CharField(max_length=255)
+    group = models.ManyToManyField(ClassName)
+    content_type = models.CharField(max_length=255)
     image = models.ImageField(upload_to='images/')
-    slug= models.SlugField(unique=True)
+    slug = models.SlugField(unique=True)
     
     def __str__(self):
-        return self.type
-
+        return self.content_type
 
 class Quiz(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField()
-    question_a = models.CharField(max_length=255)
-    question_b = models.CharField(max_length=255)
-    question_c = models.CharField(max_length=255)
-    question_d = models.CharField(max_length=255)
-    question_e = models.CharField(max_length=255)
+    question_a_text = models.CharField(max_length=255, null=True)
+    question_b_text = models.CharField(max_length=255, null=True)
+    question_c_text = models.CharField(max_length=255, null=True)
+    question_d_text = models.CharField(max_length=255, null=True)
+    question_e_text = models.CharField(max_length=255, null=True)
 
     def __str__(self):
         return self.title
 
-
 class MCQ(models.Model):
-    question = models.TextField()
+    question_text = models.TextField()
     option_a = models.CharField(max_length=255)
     option_b = models.CharField(max_length=255)
     option_c = models.CharField(max_length=255)
     option_d = models.CharField(max_length=255)
 
     def __str__(self):
-        return self.question
-
+        return self.question_text
 
 class Exercise(models.Model):
     book_image = models.ImageField(upload_to='images/')

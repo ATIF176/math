@@ -165,7 +165,7 @@ html {
 
 
 .class-heading {
-  background-color: #4166c7;
+  background: linear-gradient(to right, rgba(0, 98, 185, 0.8), rgba(0, 98, 185, 0.8)), url(../../assets/svg/common-bg.svg);
   color: white;
   margin-top: 10px;
   font-size: xx-large;
